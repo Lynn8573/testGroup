@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<c3p0-config>
+<!--    命名的配置-->
+    <default-config>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/java2010?useSSL=false</property>
+        <property name="user">root</property>
+        <property name="password">123456</property>
+<!--        池子中数据连接对象不够的话可以加  每次加5个-->
+        <property name="acquireIncrement">5</property>
+<!--        初始化连接数-->
+        <property name="initialPoolSize">10</property>
+<!--        最大的连接数-->
+        <property name="maxPoolSize">40</property>
+        <property name="minPoolSize">10</property>
+<!--        可以预加载 preparestatment数量-->
+        <property name="maxStatements">200</property>
+<!--        连接池中单个连接拥有的最大缓存的statement个数-->
+        <property name="maxStatementsPerConnection">5</property>
+    </default-config>
+
+<!--    可以自定义连接池-->
+    <name-config name="test">
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/java2010?useSSL=false</property>
+        <property name="user">root</property>
+        <property name="password">123456</property>
+        <!--        池子中数据连接对象不够的话可以加  每次加5个-->
+        <property name="acquireIncrement">5</property>
+        <!--        初始化连接数-->
+        <property name="initialPoolSize">10</property>
+        <!--        最大的连接数-->
+        <property name="maxPoolSize">40</property>
+        <property name="minPoolSize">10</property>
+        <!--        可以预加载 preparestatment数量-->
+        <property name="maxStatements">200</property>
+        <!--        连接池中单个连接拥有的最大缓存的statement个数-->
+        <property name="maxStatementsPerConnection">5</property>
+    </name-config>
+</c3p0-config>
